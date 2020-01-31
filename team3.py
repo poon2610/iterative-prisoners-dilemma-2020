@@ -20,10 +20,9 @@ def move(my_history, their_history, my_score, their_score):
     
     Returns 'c' or 'b' for collude or betray.
     '''
-    if 'b' in their_history:
-        return 'b'
-    else:
-        return 'c'
+    
+    #This example player always betrays.      
+    return 'b'
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
