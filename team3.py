@@ -19,7 +19,4 @@ def move(my_history, their_history, my_score, their_score):
     The most recent round is my_history[-1] and their_history[-1]
     
     Returns 'c' or 'b' for collude or betray.
-    '''
-    
-    #This example player always betrays.      
     return 'b'
