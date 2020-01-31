@@ -9,8 +9,7 @@
 team_name = 'Ok Pooner' # Only 10 chars displayed.
 strategy_name = 'Becollude'
 strategy_description = 'I_dont_know'
- import random
-    
+
 def move(my_history, their_history, my_score, their_score):
     '''Make my move based on the history with this player.
     
@@ -22,5 +21,5 @@ def move(my_history, their_history, my_score, their_score):
     Returns 'c' or 'b' for collude or betray.
     '''
     
-    #This example player always betrays.      
-    return random.choice(['', ' ', 4])
+    # This player always colludes.
+    return 'c'
