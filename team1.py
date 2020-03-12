@@ -31,11 +31,11 @@ def move(my_history, their_history, my_score, their_score):
         # do whatever they did in the round that followed it
         
         # Reference last round
-        recent_round_them = their_history[-1]
-        recent_round_me = my_history[-1]
+        recent_round_them = their_history[-2]
+        recent_round_me = my_history[-2]
                     
         # Look at rounds before that one
-        for round in range(len(my_history)-1):
+        for round in range(len(my_history)-2):
             prior_round_them = their_history[round]
             prior_round_me = my_history[round]
             # If one matches
@@ -43,7 +43,7 @@ def move(my_history, their_history, my_score, their_score):
                     (prior_round_them == recent_round_them):
                 return their_history[round]
         # No match found
-        if my_history[-1]=='c' and their_history[-1]=='b':
+        if my_history[-2]=='c' and their_history[-2]=='b':
             return 'b' # Betray if they were severely punished last time
         else:
             return 'c' # Otherwise collude.
